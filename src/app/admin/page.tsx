@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { db } from "@/lib/db";
 import { registrations } from "@/lib/db/schema";
 import { desc, sql } from "drizzle-orm";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
-import ZitaraIcon from "@/components/ui/zitara-icon";
 import AdminLoginForm from "@/components/admin/login-form";
 import CheckinButton from "@/components/admin/checkin-button";
 import QrScanner from "@/components/admin/qr-scanner";
@@ -52,22 +52,23 @@ export default async function AdminPage() {
       <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <ZitaraIcon className="h-8 w-auto" color="#BF7634" />
-            <div className="flex flex-col leading-none">
-              <span className="text-lg font-extrabold text-white tracking-tight uppercase">
-                Zítara
-              </span>
-              <span className="text-[10px] text-zitara-gold font-medium tracking-widest uppercase">
-                Admin
-              </span>
-            </div>
+            <Image
+              src="/images/logo-gc-horizontal-olive.png"
+              alt="Zítara Golf Club"
+              width={160}
+              height={44}
+              className="h-10 w-auto"
+            />
+            <span className="text-[10px] text-zitara-gold font-medium tracking-widest uppercase">
+              Admin
+            </span>
           </Link>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-2xl font-bold text-zitara-olive">
+          <h1 className="text-2xl font-heading font-bold text-zitara-olive uppercase tracking-tight">
             Panel de Registros
           </h1>
           <QrScanner />

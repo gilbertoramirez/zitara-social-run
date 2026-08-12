@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import RegistrationForm from "@/components/registration/registration-form";
-import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export const metadata = {
   title: "Registro — Zítara Social Run",
@@ -12,23 +12,21 @@ export default function RegistroPage() {
     <div className="min-h-screen bg-zitara-cream-light">
       <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <ZitaraIcon className="h-8 w-auto" color="#BF7634" />
-            <div className="flex flex-col leading-none">
-              <span className="text-lg font-extrabold text-white tracking-tight uppercase">
-                Zítara
-              </span>
-              <span className="text-[10px] text-zitara-gold font-medium tracking-[0.2em] uppercase">
-                Social Run
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo-gc-horizontal-olive.png"
+              alt="Zítara Golf Club"
+              width={160}
+              height={44}
+              className="h-10 w-auto"
+            />
           </Link>
         </div>
       </div>
 
       <div className="max-w-xl mx-auto px-4 sm:px-6 py-12">
         <div className="text-center mb-10">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-zitara-olive uppercase tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-heading font-black text-zitara-olive uppercase tracking-tight">
             Registro
           </h1>
           <p className="mt-3 text-zitara-gray">

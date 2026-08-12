@@ -24,7 +24,7 @@ export default function RoutesSection() {
           <p className="text-zitara-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
             Elige tu distancia
           </p>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-zitara-olive uppercase tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-heading font-black text-zitara-olive uppercase tracking-tight">
             Rutas para todos
           </h2>
           <p className="mt-4 text-lg text-zitara-gray max-w-2xl mx-auto">

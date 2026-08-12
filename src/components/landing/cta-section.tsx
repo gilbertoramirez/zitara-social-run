@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ZitaraIcon from "@/components/ui/zitara-icon";
+import Image from "next/image";
 
 export default function CtaSection() {
   return (
@@ -11,9 +11,15 @@ export default function CtaSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex justify-center mb-8">
-          <ZitaraIcon className="h-16 sm:h-20 w-auto opacity-40" color="#BF7634" />
+          <Image
+            src="/images/logo-gc-olive.png"
+            alt="Zítara Golf Club"
+            width={120}
+            height={120}
+            className="h-24 sm:h-28 w-auto opacity-60"
+          />
         </div>
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight uppercase tracking-tight">
+        <h2 className="text-4xl sm:text-5xl font-heading font-black text-white leading-tight uppercase tracking-tight">
           Vive los avances, conecta
           <br />
           con la naturaleza

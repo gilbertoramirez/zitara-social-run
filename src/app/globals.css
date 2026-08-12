@@ -12,8 +12,8 @@
   --color-zitara-cream-light: #faf5ed;
   --color-zitara-gray: #6b7280;
   --color-zitara-gray-light: #9ca3af;
-  --font-sans: var(--font-dm-sans);
-  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-telka);
+  --font-heading: var(--font-at-gambit);
 }
 
 body {

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,15 +12,14 @@ export default function Header() {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
-            <ZitaraIcon className="h-8 w-auto" color="#BF7634" />
-            <div className="flex flex-col leading-none">
-              <span className="text-lg font-extrabold text-white tracking-tight uppercase">
-                Zítara
-              </span>
-              <span className="text-[10px] text-zitara-gold font-medium tracking-[0.2em] uppercase">
-                Social Run
-              </span>
-            </div>
+            <Image
+              src="/images/logo-gc-horizontal-olive.png"
+              alt="Zítara Golf Club"
+              width={180}
+              height={50}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ZitaraIcon from "@/components/ui/zitara-icon";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -13,20 +13,24 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in-up flex justify-center mb-8">
-          <ZitaraIcon className="h-24 sm:h-32 lg:h-40 w-auto" color="#BF7634" />
+          <Image
+            src="/images/logo-gc-olive.png"
+            alt="Zítara Golf Club"
+            width={280}
+            height={280}
+            className="h-48 sm:h-56 lg:h-64 w-auto"
+            priority
+          />
         </div>
 
         <div className="animate-fade-in-up">
-          <p className="text-zitara-gold text-sm sm:text-base font-semibold tracking-[0.3em] uppercase mb-6">
+          <p className="text-zitara-gold text-sm sm:text-base font-medium tracking-[0.3em] uppercase mb-6">
             2do Aniversario de la Primera Piedra
           </p>
         </div>
 
         <h1 className="animate-fade-in-up animate-delay-100">
-          <span className="block text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-none uppercase">
-            Zítara
-          </span>
-          <span className="block text-3xl sm:text-4xl lg:text-5xl font-serif font-light mt-2 text-zitara-cream tracking-wide">
+          <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
             Social Run
           </span>
         </h1>
@@ -54,17 +58,17 @@ export default function Hero() {
 
         <div className="animate-fade-in-up animate-delay-400 mt-16 flex flex-wrap justify-center gap-8 sm:gap-16">
           <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-bold text-white">3</p>
+            <p className="text-3xl sm:text-4xl font-heading font-bold text-white">3</p>
             <p className="text-sm text-white/50 mt-1">Rutas</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-bold text-white">
+            <p className="text-3xl sm:text-4xl font-heading font-bold text-white">
               3-8 <span className="text-lg">km</span>
             </p>
             <p className="text-sm text-white/50 mt-1">Distancias</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-bold text-zitara-gold">
+            <p className="text-3xl sm:text-4xl font-heading font-bold text-zitara-gold">
               $0
             </p>
             <p className="text-sm text-white/50 mt-1">Gratuito</p>

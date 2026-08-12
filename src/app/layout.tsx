@@ -1,17 +1,31 @@
 import type { Metadata } from "next";
-import { DM_Sans, Cormorant_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+const atGambit = localFont({
+  src: [
+    { path: "../../public/fonts/AtGambit-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/AtGambit-RegularItalic.ttf", weight: "400", style: "italic" },
+    { path: "../../public/fonts/AtGambit-Semibold.ttf", weight: "600", style: "normal" },
+    { path: "../../public/fonts/AtGambit-SemiboldItalic.ttf", weight: "600", style: "italic" },
+    { path: "../../public/fonts/AtGambit-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../../public/fonts/AtGambit-BoldItalic.ttf", weight: "700", style: "italic" },
+    { path: "../../public/fonts/AtGambit-Black.ttf", weight: "900", style: "normal" },
+    { path: "../../public/fonts/AtGambit-BlackItalic.ttf", weight: "900", style: "italic" },
+  ],
+  variable: "--font-at-gambit",
+  display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const telka = localFont({
+  src: [
+    { path: "../../public/fonts/Telka-Light.otf", weight: "300", style: "normal" },
+    { path: "../../public/fonts/Telka-Regular.otf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/Telka-Medium.otf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/Telka-Bold.otf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-telka",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${dmSans.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${atGambit.variable} ${telka.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
