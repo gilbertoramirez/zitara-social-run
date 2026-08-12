@@ -1,5 +1,6 @@
 import Link from "next/link";
 import RegistrationForm from "@/components/registration/registration-form";
+import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export const metadata = {
   title: "Registro — Zítara Social Run",
@@ -12,12 +13,15 @@ export default function RegistroPage() {
       <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
-            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
-              Zítara
-            </span>
-            <span className="text-xs text-zitara-gold font-medium tracking-[0.2em] uppercase">
-              Social Run
-            </span>
+            <ZitaraIcon className="h-8 w-auto" color="#BF7634" />
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-extrabold text-white tracking-tight uppercase">
+                Zítara
+              </span>
+              <span className="text-[10px] text-zitara-gold font-medium tracking-[0.2em] uppercase">
+                Social Run
+              </span>
+            </div>
           </Link>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export default function CtaSection() {
   return (
@@ -9,6 +10,9 @@ export default function CtaSection() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="flex justify-center mb-8">
+          <ZitaraIcon className="h-16 sm:h-20 w-auto opacity-40" color="#BF7634" />
+        </div>
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight uppercase tracking-tight">
           Vive los avances, conecta
           <br />

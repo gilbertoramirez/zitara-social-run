@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,12 +12,15 @@ export default function Header() {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
-            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
-              Zítara
-            </span>
-            <span className="text-xs text-zitara-gold font-medium tracking-[0.2em] uppercase">
-              Social Run
-            </span>
+            <ZitaraIcon className="h-8 w-auto" color="#BF7634" />
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-extrabold text-white tracking-tight uppercase">
+                Zítara
+              </span>
+              <span className="text-[10px] text-zitara-gold font-medium tracking-[0.2em] uppercase">
+                Social Run
+              </span>
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

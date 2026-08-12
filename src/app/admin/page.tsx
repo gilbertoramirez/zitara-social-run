@@ -2,6 +2,7 @@ import Link from "next/link";
 import { db } from "@/lib/db";
 import { registrations } from "@/lib/db/schema";
 import { desc, sql } from "drizzle-orm";
+import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export const metadata = {
   title: "Admin — Zítara Social Run",
@@ -43,13 +44,16 @@ export default async function AdminPage() {
     <div className="min-h-screen bg-zitara-cream-light">
       <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
-              Zítara
-            </span>
-            <span className="text-xs text-zitara-gold font-medium tracking-widest uppercase">
-              Admin
-            </span>
+          <Link href="/" className="flex items-center gap-3">
+            <ZitaraIcon className="h-8 w-auto" color="#BF7634" />
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-extrabold text-white tracking-tight uppercase">
+                Zítara
+              </span>
+              <span className="text-[10px] text-zitara-gold font-medium tracking-widest uppercase">
+                Admin
+              </span>
+            </div>
           </Link>
         </div>
       </div>

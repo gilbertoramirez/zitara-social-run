@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ZitaraIcon from "@/components/ui/zitara-icon";
 
 export default function Hero() {
   return (
@@ -11,6 +12,10 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+        <div className="animate-fade-in-up flex justify-center mb-8">
+          <ZitaraIcon className="h-24 sm:h-32 lg:h-40 w-auto" color="#BF7634" />
+        </div>
+
         <div className="animate-fade-in-up">
           <p className="text-zitara-gold text-sm sm:text-base font-semibold tracking-[0.3em] uppercase mb-6">
             2do Aniversario de la Primera Piedra
