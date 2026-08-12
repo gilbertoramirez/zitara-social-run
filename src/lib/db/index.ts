@@ -1,5 +1,16 @@
-import { sql } from "@vercel/postgres";
-import { drizzle } from "drizzle-orm/vercel-postgres";
+import { neon } from "@neondatabase/serverless";
+import { drizzle, NeonHttpDatabase } from "drizzle-orm/neon-http";
 import * as schema from "./schema";
 
-export const db = drizzle(sql, { schema });
+let _db: NeonHttpDatabase<typeof schema> | null = null;
+
+export const db = new Proxy({} as NeonHttpDatabase<typeof schema>, {
+  get(_target, prop) {
+    if (!_db) {
+      const url = process.env.DATABASE_URL;
+      if (!url) throw new Error("DATABASE_URL is not set");
+      _db = drizzle(neon(url), { schema });
+    }
+    return (_db as unknown as Record<string | symbol, unknown>)[prop];
+  },
+});

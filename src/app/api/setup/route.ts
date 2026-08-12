@@ -1,8 +1,10 @@
-import { sql } from "@vercel/postgres";
+import { neon } from "@neondatabase/serverless";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+    const sql = neon(process.env.DATABASE_URL!);
+
     await sql`
       CREATE TABLE IF NOT EXISTS registrations (
         id SERIAL PRIMARY KEY,

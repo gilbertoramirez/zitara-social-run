@@ -1,6 +1,8 @@
-import { sql } from "@vercel/postgres";
+import { neon } from "@neondatabase/serverless";
 
 async function createTables() {
+  const sql = neon(process.env.DATABASE_URL!);
+
   await sql`
     CREATE TABLE IF NOT EXISTS registrations (
       id SERIAL PRIMARY KEY,
