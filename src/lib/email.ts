@@ -1,9 +1,14 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-function getResendClient() {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) return null;
-  return new Resend(key);
+function getTransporter() {
+  const user = process.env.GMAIL_USER;
+  const pass = process.env.GMAIL_APP_PASSWORD;
+  if (!user || !pass) return null;
+
+  return nodemailer.createTransport({
+    service: "gmail",
+    auth: { user, pass },
+  });
 }
 
 export async function sendConfirmationEmail(params: {
@@ -12,9 +17,9 @@ export async function sendConfirmationEmail(params: {
   ruta: string;
   qrDataUrl: string;
 }) {
-  const resend = getResendClient();
-  if (!resend) {
-    console.warn("RESEND_API_KEY not configured — skipping email");
+  const transporter = getTransporter();
+  if (!transporter) {
+    console.warn("GMAIL_USER / GMAIL_APP_PASSWORD not configured — skipping email");
     return;
   }
 
@@ -23,8 +28,8 @@ export async function sendConfirmationEmail(params: {
     ""
   );
 
-  const { error } = await resend.emails.send({
-    from: process.env.EMAIL_FROM || "Zítara Social Run <noreply@resend.dev>",
+  await transporter.sendMail({
+    from: `Zítara Social Run <${process.env.GMAIL_USER}>`,
     to: params.to,
     subject: "Tu registro para Zítara Social Run está confirmado",
     html: `
@@ -96,14 +101,9 @@ export async function sendConfirmationEmail(params: {
     attachments: [
       {
         filename: "codigo-qr.png",
-        content: base64Data,
-        contentType: "image/png",
+        content: Buffer.from(base64Data, "base64"),
+        cid: "qr-code",
       },
     ],
   });
-
-  if (error) {
-    console.error("Error sending email:", error);
-    throw new Error("No se pudo enviar el correo de confirmación");
-  }
 }
