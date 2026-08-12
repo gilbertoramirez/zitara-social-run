@@ -6,6 +6,7 @@ import { isAdminAuthenticated } from "@/lib/admin-auth";
 import ZitaraIcon from "@/components/ui/zitara-icon";
 import AdminLoginForm from "@/components/admin/login-form";
 import CheckinButton from "@/components/admin/checkin-button";
+import QrScanner from "@/components/admin/qr-scanner";
 
 export const metadata = {
   title: "Admin — Zítara Social Run",
@@ -65,9 +66,12 @@ export default async function AdminPage() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl font-bold text-zitara-olive mb-8">
-          Panel de Registros
-        </h1>
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-2xl font-bold text-zitara-olive">
+            Panel de Registros
+          </h1>
+          <QrScanner />
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-8">
           {[

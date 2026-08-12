@@ -9,16 +9,22 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "No autorizado" }, { status: 401 });
   }
 
-  const { id } = await request.json();
-  if (!id) {
-    return NextResponse.json({ error: "ID requerido" }, { status: 400 });
+  const body = await request.json();
+  const { id, codigo } = body;
+
+  if (!id && !codigo) {
+    return NextResponse.json({ error: "ID o código requerido" }, { status: 400 });
   }
 
   try {
+    const condition = codigo
+      ? eq(registrations.codigoQr, codigo)
+      : eq(registrations.id, id);
+
     const [reg] = await db
       .select()
       .from(registrations)
-      .where(eq(registrations.id, id))
+      .where(condition)
       .limit(1);
 
     if (!reg) {
@@ -26,15 +32,22 @@ export async function POST(request: NextRequest) {
     }
 
     if (reg.verificado) {
-      return NextResponse.json({ error: "Ya tiene check-in" }, { status: 409 });
+      return NextResponse.json(
+        { error: "Ya tiene check-in", nombre: reg.nombre, ruta: reg.ruta },
+        { status: 409 }
+      );
     }
 
     await db
       .update(registrations)
       .set({ verificado: true })
-      .where(eq(registrations.id, id));
+      .where(eq(registrations.id, reg.id));
 
-    return NextResponse.json({ success: true, nombre: reg.nombre });
+    return NextResponse.json({
+      success: true,
+      nombre: reg.nombre,
+      ruta: reg.ruta,
+    });
   } catch (error) {
     console.error("Checkin error:", error);
     return NextResponse.json({ error: "Error al hacer check-in" }, { status: 500 });
