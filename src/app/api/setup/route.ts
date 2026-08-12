@@ -9,7 +9,7 @@ export async function GET() {
       CREATE TABLE IF NOT EXISTS registrations (
         id SERIAL PRIMARY KEY,
         nombre VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL UNIQUE,
         telefono VARCHAR(20) NOT NULL,
         ruta VARCHAR(10) NOT NULL,
         acepto_responsabilidad BOOLEAN NOT NULL DEFAULT false,
@@ -21,16 +21,16 @@ export async function GET() {
 
     await sql`
       ALTER TABLE registrations
-      DROP CONSTRAINT IF EXISTS registrations_email_key
+      DROP CONSTRAINT IF EXISTS registrations_email_telefono_key
     `;
 
     await sql`
       DO $$ BEGIN
         IF NOT EXISTS (
-          SELECT 1 FROM pg_constraint WHERE conname = 'registrations_email_telefono_key'
+          SELECT 1 FROM pg_constraint WHERE conname = 'registrations_email_key'
         ) THEN
           ALTER TABLE registrations
-          ADD CONSTRAINT registrations_email_telefono_key UNIQUE (email, telefono);
+          ADD CONSTRAINT registrations_email_key UNIQUE (email);
         END IF;
       END $$
     `;
