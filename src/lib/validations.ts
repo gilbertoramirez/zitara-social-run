@@ -5,12 +5,21 @@ export const registrationSchema = z.object({
     .string()
     .min(2, "El nombre debe tener al menos 2 caracteres")
     .max(255, "El nombre es demasiado largo"),
-  email: z.string().email("Correo electrónico inválido"),
+  email: z
+    .string()
+    .email("Correo electrónico inválido")
+    .regex(
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Correo electrónico inválido"
+    ),
   telefono: z
     .string()
-    .min(10, "El teléfono debe tener al menos 10 dígitos")
-    .max(20, "El teléfono es demasiado largo")
-    .regex(/^[0-9+\-\s()]+$/, "Formato de teléfono inválido"),
+    .transform((v) => v.replace(/\D/g, ""))
+    .pipe(
+      z
+        .string()
+        .length(10, "El teléfono debe tener exactamente 10 dígitos")
+    ),
   ruta: z.enum(["3km", "5km", "8km"], {
     error: "Selecciona una ruta",
   }),

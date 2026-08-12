@@ -43,15 +43,20 @@ export default function RegistrationForm() {
 
   function validate(): FormErrors {
     const errs: FormErrors = {};
-    if (!nombre || nombre.length < 2) errs.nombre = "El nombre es requerido";
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      errs.email = "Correo electrónico inválido";
-    if (!telefono || telefono.replace(/\D/g, "").length < 10)
-      errs.telefono = "El teléfono debe tener al menos 10 dígitos";
+    if (!nombre || nombre.trim().length < 2) errs.nombre = "El nombre es requerido";
+    if (!email || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
+      errs.email = "Ingresa un correo electrónico válido";
+    const digits = telefono.replace(/\D/g, "");
+    if (digits.length !== 10)
+      errs.telefono = "El teléfono debe tener exactamente 10 dígitos";
     if (!ruta) errs.ruta = "Selecciona una ruta";
     if (!acepto)
       errs.aceptoResponsabilidad = "Debes aceptar el deslinde de responsabilidad";
     return errs;
+  }
+
+  function handleTelefonoChange(value: string) {
+    setTelefono(value.replace(/\D/g, "").slice(0, 10));
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -149,7 +154,8 @@ export default function RegistrationForm() {
           type="tel"
           inputMode="tel"
           value={telefono}
-          onChange={(e) => setTelefono(e.target.value)}
+          onChange={(e) => handleTelefonoChange(e.target.value)}
+          maxLength={10}
           placeholder="10 dígitos"
           className={`w-full px-4 py-3 rounded-xl border ${
             errors.telefono ? "border-red-400" : "border-gray-200"

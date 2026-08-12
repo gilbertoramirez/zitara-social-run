@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     const { nombre, email, telefono, ruta } = parsed.data;
     const codigoQr = uuidv4();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const verificationUrl = `${baseUrl}/api/verificar?codigo=${codigoQr}`;
+    const verificationUrl = `${baseUrl}/confirmacion?codigo=${codigoQr}`;
     const qrDataUrl = await generateQrDataUrl(verificationUrl);
 
     try {

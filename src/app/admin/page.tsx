@@ -2,7 +2,10 @@ import Link from "next/link";
 import { db } from "@/lib/db";
 import { registrations } from "@/lib/db/schema";
 import { desc, sql } from "drizzle-orm";
+import { isAdminAuthenticated } from "@/lib/admin-auth";
 import ZitaraIcon from "@/components/ui/zitara-icon";
+import AdminLoginForm from "@/components/admin/login-form";
+import CheckinButton from "@/components/admin/checkin-button";
 
 export const metadata = {
   title: "Admin — Zítara Social Run",
@@ -11,6 +14,9 @@ export const metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
+  const authed = await isAdminAuthenticated();
+  if (!authed) return <AdminLoginForm />;
+
   let allRegistrations: (typeof registrations.$inferSelect)[] = [];
   let stats = { total: 0, "3km": 0, "5km": 0, "8km": 0, verificados: 0 };
 
@@ -162,7 +168,7 @@ export default async function AdminPage() {
                             Check-in
                           </span>
                         ) : (
-                          <span className="text-gray-400">Pendiente</span>
+                          <CheckinButton id={reg.id} />
                         )}
                       </td>
                     </tr>

@@ -48,7 +48,7 @@ export default async function ConfirmacionPage({
     if (registration) {
       const baseUrl =
         process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-      const verificationUrl = `${baseUrl}/api/verificar?codigo=${codigo}`;
+      const verificationUrl = `${baseUrl}/confirmacion?codigo=${codigo}`;
       qrDataUrl = await generateQrDataUrl(verificationUrl);
     }
   } catch (error) {
