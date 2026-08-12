@@ -11,7 +11,7 @@ export default function WaiverModal() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="text-zitara-coral hover:text-zitara-coral-light underline underline-offset-2 text-sm font-medium transition-colors"
+        className="text-zitara-gold hover:text-zitara-gold-light underline underline-offset-2 text-sm font-medium transition-colors"
       >
         Leer deslinde completo
       </button>
@@ -24,7 +24,7 @@ export default function WaiverModal() {
           />
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] flex flex-col">
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
-              <h3 className="text-lg font-bold text-zitara-navy">
+              <h3 className="text-lg font-bold text-zitara-olive">
                 Deslinde de Responsabilidad
               </h3>
               <button
@@ -46,7 +46,7 @@ export default function WaiverModal() {
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="w-full bg-zitara-navy hover:bg-zitara-navy-light text-white font-semibold py-3 rounded-xl transition-colors"
+                className="w-full bg-zitara-olive hover:bg-zitara-olive-light text-white font-semibold py-3 rounded-xl transition-colors"
               >
                 Cerrar
               </button>

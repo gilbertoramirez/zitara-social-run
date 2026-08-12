@@ -8,14 +8,14 @@ export const metadata = {
 
 export default function RegistroPage() {
   return (
-    <div className="min-h-screen bg-zitara-cream">
-      <div className="bg-zitara-navy py-6">
+    <div className="min-h-screen bg-zitara-cream-light">
+      <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-white tracking-tight">
-              ZÍTARA
+          <Link href="/" className="flex items-center gap-3">
+            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
+              Zítara
             </span>
-            <span className="text-xs text-zitara-coral font-medium tracking-widest uppercase">
+            <span className="text-xs text-zitara-gold font-medium tracking-[0.2em] uppercase">
               Social Run
             </span>
           </Link>
@@ -24,7 +24,7 @@ export default function RegistroPage() {
 
       <div className="max-w-xl mx-auto px-4 sm:px-6 py-12">
         <div className="text-center mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-zitara-navy">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-zitara-olive uppercase tracking-tight">
             Registro
           </h1>
           <p className="mt-3 text-zitara-gray">
@@ -37,7 +37,7 @@ export default function RegistroPage() {
         </div>
 
         <p className="text-center text-sm text-zitara-gray mt-6">
-          <Link href="/" className="text-zitara-coral hover:underline">
+          <Link href="/" className="text-zitara-gold hover:underline">
             &larr; Volver al inicio
           </Link>
         </p>

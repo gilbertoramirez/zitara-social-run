@@ -40,14 +40,14 @@ export default async function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-zitara-navy py-6">
+    <div className="min-h-screen bg-zitara-cream-light">
+      <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-white tracking-tight">
-              ZÍTARA
+            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
+              Zítara
             </span>
-            <span className="text-xs text-zitara-coral font-medium tracking-widest uppercase">
+            <span className="text-xs text-zitara-gold font-medium tracking-widest uppercase">
               Admin
             </span>
           </Link>
@@ -55,13 +55,13 @@ export default async function AdminPage() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl font-bold text-zitara-navy mb-8">
+        <h1 className="text-2xl font-bold text-zitara-olive mb-8">
           Panel de Registros
         </h1>
 
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-8">
           {[
-            { label: "Total", value: stats.total, color: "bg-zitara-navy" },
+            { label: "Total", value: stats.total, color: "bg-zitara-olive" },
             { label: "3 KM", value: stats["3km"], color: "bg-emerald-500" },
             { label: "5 KM", value: stats["5km"], color: "bg-blue-500" },
             { label: "8 KM", value: stats["8km"], color: "bg-violet-500" },
@@ -76,7 +76,7 @@ export default async function AdminPage() {
               className="bg-white rounded-xl p-4 border border-gray-100"
             >
               <p className="text-sm text-gray-500">{stat.label}</p>
-              <p className="text-3xl font-bold text-zitara-navy mt-1">
+              <p className="text-3xl font-bold text-zitara-olive mt-1">
                 {stat.value}
               </p>
               <div className={`w-8 h-1 ${stat.color} rounded-full mt-2`} />

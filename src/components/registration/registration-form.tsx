@@ -16,21 +16,18 @@ interface FormErrors {
   general?: string;
 }
 
-const routeCardStyles: Record<string, { ring: string; bg: string; badge: string }> = {
+const routeCardStyles: Record<string, { ring: string; bg: string }> = {
   emerald: {
-    ring: "ring-emerald-500",
+    ring: "ring-emerald-600",
     bg: "bg-emerald-50",
-    badge: "bg-emerald-500 text-white",
   },
   blue: {
-    ring: "ring-blue-500",
-    bg: "bg-blue-50",
-    badge: "bg-blue-500 text-white",
+    ring: "ring-zitara-gold",
+    bg: "bg-amber-50",
   },
   violet: {
-    ring: "ring-violet-500",
-    bg: "bg-violet-50",
-    badge: "bg-violet-500 text-white",
+    ring: "ring-zitara-olive",
+    bg: "bg-stone-50",
   },
 };
 
@@ -105,7 +102,7 @@ export default function RegistrationForm() {
       )}
 
       <div>
-        <label htmlFor="nombre" className="block text-sm font-semibold text-zitara-navy mb-2">
+        <label htmlFor="nombre" className="block text-sm font-semibold text-zitara-olive mb-2">
           Nombre completo
         </label>
         <input
@@ -116,7 +113,7 @@ export default function RegistrationForm() {
           placeholder="Tu nombre completo"
           className={`w-full px-4 py-3 rounded-xl border ${
             errors.nombre ? "border-red-400" : "border-gray-200"
-          } focus:outline-none focus:ring-2 focus:ring-zitara-coral/50 focus:border-zitara-coral transition-colors text-gray-900 placeholder:text-gray-400`}
+          } focus:outline-none focus:ring-2 focus:ring-zitara-gold/50 focus:border-zitara-gold transition-colors text-gray-900 placeholder:text-gray-400`}
         />
         {errors.nombre && (
           <p className="mt-1 text-sm text-red-500">{errors.nombre}</p>
@@ -124,7 +121,7 @@ export default function RegistrationForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-zitara-navy mb-2">
+        <label htmlFor="email" className="block text-sm font-semibold text-zitara-olive mb-2">
           Correo electrónico
         </label>
         <input
@@ -136,7 +133,7 @@ export default function RegistrationForm() {
           placeholder="tu@correo.com"
           className={`w-full px-4 py-3 rounded-xl border ${
             errors.email ? "border-red-400" : "border-gray-200"
-          } focus:outline-none focus:ring-2 focus:ring-zitara-coral/50 focus:border-zitara-coral transition-colors text-gray-900 placeholder:text-gray-400`}
+          } focus:outline-none focus:ring-2 focus:ring-zitara-gold/50 focus:border-zitara-gold transition-colors text-gray-900 placeholder:text-gray-400`}
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-500">{errors.email}</p>
@@ -144,7 +141,7 @@ export default function RegistrationForm() {
       </div>
 
       <div>
-        <label htmlFor="telefono" className="block text-sm font-semibold text-zitara-navy mb-2">
+        <label htmlFor="telefono" className="block text-sm font-semibold text-zitara-olive mb-2">
           Teléfono
         </label>
         <input
@@ -156,7 +153,7 @@ export default function RegistrationForm() {
           placeholder="10 dígitos"
           className={`w-full px-4 py-3 rounded-xl border ${
             errors.telefono ? "border-red-400" : "border-gray-200"
-          } focus:outline-none focus:ring-2 focus:ring-zitara-coral/50 focus:border-zitara-coral transition-colors text-gray-900 placeholder:text-gray-400`}
+          } focus:outline-none focus:ring-2 focus:ring-zitara-gold/50 focus:border-zitara-gold transition-colors text-gray-900 placeholder:text-gray-400`}
         />
         {errors.telefono && (
           <p className="mt-1 text-sm text-red-500">{errors.telefono}</p>
@@ -164,7 +161,7 @@ export default function RegistrationForm() {
       </div>
 
       <div>
-        <p className="block text-sm font-semibold text-zitara-navy mb-4">
+        <p className="block text-sm font-semibold text-zitara-olive mb-4">
           Selecciona tu ruta
         </p>
         {errors.ruta && (
@@ -187,7 +184,7 @@ export default function RegistrationForm() {
               >
                 <span
                   className={`inline-block text-xl font-bold mb-1 ${
-                    selected ? "" : "text-zitara-navy"
+                    selected ? "text-zitara-olive" : "text-zitara-olive"
                   }`}
                 >
                   {route.label}
@@ -208,12 +205,12 @@ export default function RegistrationForm() {
             type="checkbox"
             checked={acepto}
             onChange={(e) => setAcepto(e.target.checked)}
-            className="mt-1 h-5 w-5 rounded border-gray-300 text-zitara-coral focus:ring-zitara-coral cursor-pointer accent-[#e94560]"
+            className="mt-1 h-5 w-5 rounded border-gray-300 text-zitara-gold focus:ring-zitara-gold cursor-pointer accent-[#BF7634]"
           />
           <div>
             <label
               htmlFor="acepto"
-              className="text-sm text-zitara-navy font-medium cursor-pointer"
+              className="text-sm text-zitara-olive font-medium cursor-pointer"
             >
               He leído y acepto el deslinde de responsabilidad
             </label>
@@ -232,7 +229,7 @@ export default function RegistrationForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-zitara-coral hover:bg-zitara-coral-light disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-full text-lg transition-all hover:shadow-lg hover:shadow-zitara-coral/25"
+        className="w-full bg-zitara-gold hover:bg-zitara-gold-light disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-full text-lg transition-all hover:shadow-lg hover:shadow-zitara-gold/25"
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">

@@ -1,21 +1,18 @@
 import { EVENT } from "@/lib/constants";
 import Link from "next/link";
 
-const routeStyles: Record<string, { gradient: string; badge: string; icon: string }> = {
+const routeStyles: Record<string, { gradient: string; badge: string }> = {
   emerald: {
     gradient: "from-emerald-500/10 to-emerald-500/5",
-    badge: "bg-emerald-500 text-white",
-    icon: "text-emerald-500",
+    badge: "bg-emerald-600 text-white",
   },
   blue: {
-    gradient: "from-blue-500/10 to-blue-500/5",
-    badge: "bg-blue-500 text-white",
-    icon: "text-blue-500",
+    gradient: "from-zitara-gold/10 to-zitara-gold/5",
+    badge: "bg-zitara-gold text-white",
   },
   violet: {
-    gradient: "from-violet-500/10 to-violet-500/5",
-    badge: "bg-violet-500 text-white",
-    icon: "text-violet-500",
+    gradient: "from-zitara-olive/10 to-zitara-olive/5",
+    badge: "bg-zitara-olive text-white",
   },
 };
 
@@ -24,10 +21,10 @@ export default function RoutesSection() {
     <section id="rutas" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-zitara-coral text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+          <p className="text-zitara-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
             Elige tu distancia
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-zitara-navy">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-zitara-olive uppercase tracking-tight">
             Rutas para todos
           </h2>
           <p className="mt-4 text-lg text-zitara-gray max-w-2xl mx-auto">
@@ -47,7 +44,7 @@ export default function RoutesSection() {
                 <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${style.badge} mb-6`}>
                   <span className="text-2xl font-bold">{route.label}</span>
                 </div>
-                <h3 className="text-xl font-bold text-zitara-navy mb-2">
+                <h3 className="text-xl font-bold text-zitara-olive mb-2">
                   Ruta de {route.label}
                 </h3>
                 <p className="text-zitara-gray">{route.description}</p>

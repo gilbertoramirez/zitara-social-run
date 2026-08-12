@@ -7,14 +7,14 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-zitara-navy/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-zitara-olive/95 backdrop-blur-sm">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-white tracking-tight">
-              ZÍTARA
+          <Link href="/" className="flex items-center gap-3">
+            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
+              Zítara
             </span>
-            <span className="text-xs text-zitara-coral font-medium tracking-widest uppercase">
+            <span className="text-xs text-zitara-gold font-medium tracking-[0.2em] uppercase">
               Social Run
             </span>
           </Link>
@@ -40,7 +40,7 @@ export default function Header() {
             </a>
             <Link
               href="/registro"
-              className="bg-zitara-coral hover:bg-zitara-coral-light text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
+              className="bg-zitara-gold hover:bg-zitara-gold-light text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
             >
               Registrarme
             </Link>
@@ -66,7 +66,7 @@ export default function Header() {
             <a href="#rutas" onClick={() => setMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Rutas</a>
             <a href="#horario" onClick={() => setMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Horario</a>
             <a href="#amenidades" onClick={() => setMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Amenidades</a>
-            <Link href="/registro" onClick={() => setMenuOpen(false)} className="block bg-zitara-coral hover:bg-zitara-coral-light text-white text-center font-semibold px-6 py-2.5 rounded-full transition-colors mt-2">
+            <Link href="/registro" onClick={() => setMenuOpen(false)} className="block bg-zitara-gold hover:bg-zitara-gold-light text-white text-center font-semibold px-6 py-2.5 rounded-full transition-colors mt-2">
               Registrarme
             </Link>
           </div>

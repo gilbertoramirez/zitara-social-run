@@ -83,13 +83,13 @@ function renderHtml(
   <title>${title} — Zítara Social Run</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #1a1a2e; padding: 20px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #313323; padding: 20px; }
     .card { background: #fff; border-radius: 16px; padding: 48px 32px; text-align: center; max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
     .icon { width: 64px; height: 64px; border-radius: 50%; background: ${c.bg}; border: 3px solid ${c.border}; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px; color: ${c.text}; }
-    h1 { font-size: 24px; color: #1a1a2e; margin-bottom: 8px; }
+    h1 { font-size: 24px; color: #313323; margin-bottom: 8px; }
     p { font-size: 16px; color: #666; line-height: 1.5; }
-    .route { display: inline-block; background: #1a1a2e; color: #fff; padding: 8px 24px; border-radius: 50px; font-size: 18px; font-weight: bold; margin-top: 16px; }
-    .brand { margin-top: 32px; font-size: 12px; color: #aaa; letter-spacing: 2px; text-transform: uppercase; }
+    .route { display: inline-block; background: #BF7634; color: #fff; padding: 8px 24px; border-radius: 50px; font-size: 18px; font-weight: bold; margin-top: 16px; }
+    .brand { margin-top: 32px; font-size: 12px; color: #BF7634; letter-spacing: 2px; text-transform: uppercase; }
   </style>
 </head>
 <body>

@@ -19,12 +19,12 @@ export default async function ConfirmacionPage({
 
   if (!codigo) {
     return (
-      <div className="min-h-screen bg-zitara-cream flex items-center justify-center px-4">
+      <div className="min-h-screen bg-zitara-cream-light flex items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-zitara-navy mb-4">
+          <h1 className="text-2xl font-bold text-zitara-olive mb-4">
             Código no proporcionado
           </h1>
-          <Link href="/registro" className="text-zitara-coral hover:underline">
+          <Link href="/registro" className="text-zitara-gold hover:underline">
             Ir al registro
           </Link>
         </div>
@@ -56,15 +56,15 @@ export default async function ConfirmacionPage({
 
   if (!registration) {
     return (
-      <div className="min-h-screen bg-zitara-cream flex items-center justify-center px-4">
+      <div className="min-h-screen bg-zitara-cream-light flex items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-zitara-navy mb-4">
+          <h1 className="text-2xl font-bold text-zitara-olive mb-4">
             Registro no encontrado
           </h1>
           <p className="text-zitara-gray mb-6">
             El código proporcionado no corresponde a ningún registro.
           </p>
-          <Link href="/registro" className="text-zitara-coral hover:underline">
+          <Link href="/registro" className="text-zitara-gold hover:underline">
             Registrarme
           </Link>
         </div>
@@ -73,14 +73,14 @@ export default async function ConfirmacionPage({
   }
 
   return (
-    <div className="min-h-screen bg-zitara-cream">
-      <div className="bg-zitara-navy py-6">
+    <div className="min-h-screen bg-zitara-cream-light">
+      <div className="bg-zitara-olive py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-white tracking-tight">
-              ZÍTARA
+          <Link href="/" className="flex items-center gap-3">
+            <span className="text-xl font-extrabold text-white tracking-tight uppercase">
+              Zítara
             </span>
-            <span className="text-xs text-zitara-coral font-medium tracking-widest uppercase">
+            <span className="text-xs text-zitara-gold font-medium tracking-[0.2em] uppercase">
               Social Run
             </span>
           </Link>
@@ -94,8 +94,8 @@ export default async function ConfirmacionPage({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h1 className="text-3xl font-bold text-zitara-navy">
-            ¡Registro exitoso!
+          <h1 className="text-3xl font-extrabold text-zitara-olive uppercase tracking-tight">
+            Registro exitoso
           </h1>
           <p className="mt-2 text-zitara-gray">
             Tu lugar está reservado, {registration.nombre}
@@ -109,7 +109,7 @@ export default async function ConfirmacionPage({
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">
                   Nombre
                 </p>
-                <p className="font-semibold text-zitara-navy">
+                <p className="font-semibold text-zitara-olive">
                   {registration.nombre}
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default async function ConfirmacionPage({
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">
                   Ruta
                 </p>
-                <p className="font-semibold text-zitara-navy">
+                <p className="font-semibold text-zitara-olive">
                   {registration.ruta.toUpperCase()}
                 </p>
               </div>
@@ -125,21 +125,21 @@ export default async function ConfirmacionPage({
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">
                   Registro
                 </p>
-                <p className="font-semibold text-zitara-navy">6:20 AM</p>
+                <p className="font-semibold text-zitara-olive">6:20 AM</p>
               </div>
               <div>
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">
                   Salida
                 </p>
-                <p className="font-semibold text-zitara-navy">7:00 AM</p>
+                <p className="font-semibold text-zitara-olive">7:00 AM</p>
               </div>
             </div>
 
             <QrDisplay qrDataUrl={qrDataUrl} />
           </div>
 
-          <div className="bg-amber-50 border-t border-amber-100 px-6 py-4">
-            <p className="text-sm text-amber-800">
+          <div className="bg-zitara-cream border-t border-zitara-gold/20 px-6 py-4">
+            <p className="text-sm text-zitara-olive">
               <strong>Importante:</strong> Guarda o captura este código QR. Es
               tu entrada al evento. También se envió a tu correo electrónico.
             </p>
@@ -147,7 +147,7 @@ export default async function ConfirmacionPage({
         </div>
 
         <p className="text-center text-sm text-zitara-gray mt-8">
-          <Link href="/" className="text-zitara-coral hover:underline">
+          <Link href="/" className="text-zitara-gold hover:underline">
             &larr; Volver al inicio
           </Link>
         </p>

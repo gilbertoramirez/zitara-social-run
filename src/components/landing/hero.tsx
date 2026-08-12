@@ -2,24 +2,26 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-zitara-navy overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-zitara-navy via-zitara-navy/95 to-zitara-navy" />
+    <section className="relative min-h-screen flex items-center justify-center bg-zitara-olive overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-zitara-olive via-zitara-olive/95 to-zitara-olive" />
 
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-zitara-coral rounded-full blur-[100px]" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-zitara-gold rounded-full blur-[120px]" />
+      <div className="absolute inset-0 opacity-[0.07]">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-zitara-gold rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-zitara-cream rounded-full blur-[120px]" />
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in-up">
-          <p className="text-zitara-coral text-sm sm:text-base font-semibold tracking-[0.3em] uppercase mb-6">
+          <p className="text-zitara-gold text-sm sm:text-base font-semibold tracking-[0.3em] uppercase mb-6">
             2do Aniversario de la Primera Piedra
           </p>
         </div>
 
-        <h1 className="animate-fade-in-up animate-delay-100 text-5xl sm:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-none">
-          ZÍTARA
-          <span className="block text-3xl sm:text-4xl lg:text-5xl font-light mt-2 text-white/80">
+        <h1 className="animate-fade-in-up animate-delay-100">
+          <span className="block text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-none uppercase">
+            Zítara
+          </span>
+          <span className="block text-3xl sm:text-4xl lg:text-5xl font-serif font-light mt-2 text-zitara-cream tracking-wide">
             Social Run
           </span>
         </h1>
@@ -33,13 +35,13 @@ export default function Hero() {
         <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/registro"
-            className="bg-zitara-coral hover:bg-zitara-coral-light text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-zitara-coral/25"
+            className="bg-zitara-gold hover:bg-zitara-gold-light text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-zitara-gold/25"
           >
             Registrarme Gratis
           </Link>
           <a
             href="#rutas"
-            className="border-2 border-white/20 hover:border-white/40 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:bg-white/5"
+            className="border-2 border-white/20 hover:border-zitara-gold/40 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:bg-white/5"
           >
             Ver Rutas
           </a>

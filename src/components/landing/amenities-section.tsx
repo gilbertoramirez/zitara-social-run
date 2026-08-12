@@ -43,10 +43,10 @@ export default function AmenitiesSection() {
     <section id="amenidades" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-zitara-coral text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+          <p className="text-zitara-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
             Después de la carrera
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-zitara-navy">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-zitara-olive uppercase tracking-tight">
             Zona de convivencia
           </h2>
           <p className="mt-4 text-lg text-zitara-gray max-w-2xl mx-auto">
@@ -61,10 +61,10 @@ export default function AmenitiesSection() {
               key={item.label}
               className="text-center p-6 rounded-2xl hover:bg-zitara-cream transition-colors"
             >
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-zitara-coral/10 flex items-center justify-center text-zitara-coral mb-4">
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-zitara-gold/10 flex items-center justify-center text-zitara-gold mb-4">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-zitara-navy mb-2">{item.label}</h3>
+              <h3 className="font-bold text-zitara-olive mb-2">{item.label}</h3>
               <p className="text-sm text-zitara-gray">{item.desc}</p>
             </div>
           ))}

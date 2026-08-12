@@ -6,7 +6,7 @@ export async function generateQrDataUrl(
   return QRCode.toDataURL(verificationUrl, {
     width: 400,
     margin: 2,
-    color: { dark: "#1a1a2e", light: "#ffffff" },
+    color: { dark: "#313323", light: "#ffffff" },
     errorCorrectionLevel: "H",
   });
 }
@@ -17,7 +17,7 @@ export async function generateQrBuffer(
   return QRCode.toBuffer(verificationUrl, {
     width: 400,
     margin: 2,
-    color: { dark: "#1a1a2e", light: "#ffffff" },
+    color: { dark: "#313323", light: "#ffffff" },
     errorCorrectionLevel: "H",
   });
 }
