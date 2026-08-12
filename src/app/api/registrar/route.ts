@@ -37,9 +37,9 @@ export async function POST(request: NextRequest) {
       const err = dbError as { code?: string; constraint?: string; cause?: { code?: string; constraint?: string } };
       const code = err.code || err.cause?.code;
       const constraint = err.constraint || err.cause?.constraint;
-      if (code === "23505" || constraint?.includes("email")) {
+      if (code === "23505") {
         return NextResponse.json(
-          { error: "Este correo electrónico ya está registrado" },
+          { error: "Ya existe un registro con este correo y teléfono" },
           { status: 409 }
         );
       }
