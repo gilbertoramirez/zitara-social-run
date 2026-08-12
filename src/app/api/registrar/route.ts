@@ -34,11 +34,10 @@ export async function POST(request: NextRequest) {
         codigoQr,
       });
     } catch (dbError: unknown) {
-      const error = dbError as { code?: string; constraint?: string };
-      if (
-        error.code === "23505" ||
-        error.constraint?.includes("email")
-      ) {
+      const err = dbError as { code?: string; constraint?: string; cause?: { code?: string; constraint?: string } };
+      const code = err.code || err.cause?.code;
+      const constraint = err.constraint || err.cause?.constraint;
+      if (code === "23505" || constraint?.includes("email")) {
         return NextResponse.json(
           { error: "Este correo electrónico ya está registrado" },
           { status: 409 }
