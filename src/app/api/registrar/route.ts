@@ -2,9 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import { db } from "@/lib/db";
 import { registrations } from "@/lib/db/schema";
+import { sql } from "drizzle-orm";
 import { registrationSchema } from "@/lib/validations";
 import { generateQrDataUrl } from "@/lib/qr";
 import { sendConfirmationEmail } from "@/lib/email";
+import { EVENT } from "@/lib/constants";
 
 export async function POST(request: NextRequest) {
   try {
@@ -15,6 +17,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "Datos inválidos", details: parsed.error.flatten().fieldErrors },
         { status: 400 }
+      );
+    }
+
+    const [countResult] = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(registrations);
+    if (Number(countResult.count) >= EVENT.maxCapacity) {
+      return NextResponse.json(
+        { error: "Lo sentimos, el cupo está lleno. Ya no hay lugares disponibles." },
+        { status: 409 }
       );
     }
 

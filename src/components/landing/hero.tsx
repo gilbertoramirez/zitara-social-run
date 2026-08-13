@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { EVENT } from "@/lib/constants";
+import Countdown from "./countdown";
+import SpotsCounter from "./spots-counter";
 
 export default function Hero() {
   return (
@@ -25,7 +28,7 @@ export default function Hero() {
 
         <div className="animate-fade-in-up">
           <p className="text-zitara-gold text-sm sm:text-base font-medium tracking-[0.3em] uppercase mb-6">
-            2do Aniversario de la Primera Piedra
+            {EVENT.tagline}
           </p>
         </div>
 
@@ -34,6 +37,14 @@ export default function Hero() {
             Social Run
           </span>
         </h1>
+
+        <p className="animate-fade-in-up animate-delay-100 mt-4 text-lg text-white/40 font-medium">
+          {EVENT.date}
+        </p>
+
+        <div className="animate-fade-in-up animate-delay-200 mt-8">
+          <Countdown targetDate={EVENT.eventDate} />
+        </div>
 
         <p className="animate-fade-in-up animate-delay-200 mt-8 text-lg sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
           Vive una experiencia única recorriendo los espacios que reflejan dos
@@ -56,23 +67,8 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="animate-fade-in-up animate-delay-400 mt-16 flex flex-wrap justify-center gap-8 sm:gap-16">
-          <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-heading font-bold text-white">3</p>
-            <p className="text-sm text-white/50 mt-1">Rutas</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-heading font-bold text-white">
-              3-8 <span className="text-lg">km</span>
-            </p>
-            <p className="text-sm text-white/50 mt-1">Distancias</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-heading font-bold text-zitara-gold">
-              $0
-            </p>
-            <p className="text-sm text-white/50 mt-1">Gratuito</p>
-          </div>
+        <div className="animate-fade-in-up animate-delay-400 mt-16">
+          <SpotsCounter />
         </div>
       </div>
 

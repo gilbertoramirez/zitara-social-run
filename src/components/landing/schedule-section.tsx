@@ -6,7 +6,7 @@ export default function ScheduleSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-zitara-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-            Programa del día
+            {EVENT.date} — Programa del día
           </p>
           <h2 className="text-4xl sm:text-5xl font-heading font-black text-zitara-olive uppercase tracking-tight">
             Horario
