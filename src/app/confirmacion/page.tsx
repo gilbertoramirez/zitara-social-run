@@ -127,7 +127,7 @@ export default async function ConfirmacionPage({
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">
                   Registro
                 </p>
-                <p className="font-semibold text-zitara-olive">6:20 AM</p>
+                <p className="font-semibold text-zitara-olive">6:25 AM</p>
               </div>
               <div>
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">

@@ -6,9 +6,10 @@ export const EVENT = {
   eventDate: "2026-09-05T07:00:00-06:00",
   maxCapacity: 150,
   location: "Zítara",
-  registrationTime: "6:20 AM",
+  registrationTime: "6:25 AM",
   startTime: "7:00 AM",
   price: "Gratuito",
+  petFriendly: true,
   routes: [
     {
       distance: "3km",
@@ -30,15 +31,20 @@ export const EVENT = {
     },
   ],
   amenities: [
-    { icon: "coffee", label: "Café y bebidas" },
-    { icon: "cookie", label: "Snacks y refrigerios" },
-    { icon: "heart", label: "Fisioterapia gratuita" },
-    { icon: "tree", label: "Zona de picnic y descanso" },
+    { icon: "breakfast", label: "Desayuno", desc: "Rico desayuno incluido para todos los participantes" },
+    { icon: "rehab", label: "Rehabilitación", desc: "Zona de rehabilitación con atención profesional" },
+    { icon: "picnic", label: "Zona de picnic", desc: "Espacio para relajarte, convivir y disfrutar en familia" },
+    { icon: "pet", label: "Pet Friendly", desc: "Trae a tu mascota y disfruten juntos del evento" },
+    { icon: "socks", label: "Calcetas", desc: "Entrega de calcetas para los participantes registrados" },
+    { icon: "surprise", label: "Sorpresas", desc: "Premios, sorpresas y mucha diversión durante todo el evento" },
   ],
   schedule: [
-    { time: "6:20 AM", title: "Registro y recepción", description: "Recepción de participantes y calentamiento previo" },
-    { time: "7:00 AM", title: "¡Salida!", description: "Inicio del entrenamiento por las rutas de Zítara" },
-    { time: "8:00 AM", title: "Zona de convivencia", description: "Café, snacks, fisioterapia y área de picnic" },
+    { time: "6:25 AM", title: "Registro y entrega de calcetas", description: "Recepción de participantes y entrega de calcetas a los registrados" },
+    { time: "7:00 AM", title: "¡Banderazo de salida!", description: "Inicio de la carrera para las rutas de 3 KM y 5 KM" },
+    { time: "8:00 AM", title: "Body Combat", description: "Clase de Body Combat para todos los asistentes" },
+    { time: "9:00 AM", title: "Body Balance", description: "Clase de Body Balance para relajarte y estirar" },
+    { time: "10:00 AM", title: "Zumba", description: "Clase de Zumba para cerrar con toda la energía" },
+    { time: "11:00 AM", title: "Fin del evento", description: "Desayuno, zona de picnic, rehabilitación y sorpresas" },
   ],
 } as const;
 
