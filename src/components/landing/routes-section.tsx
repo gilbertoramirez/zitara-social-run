@@ -10,10 +10,6 @@ const routeStyles: Record<string, { gradient: string; badge: string }> = {
     gradient: "from-zitara-gold/10 to-zitara-gold/5",
     badge: "bg-zitara-gold text-white",
   },
-  violet: {
-    gradient: "from-zitara-olive/10 to-zitara-olive/5",
-    badge: "bg-zitara-olive text-white",
-  },
 };
 
 export default function RoutesSection() {
@@ -33,7 +29,7 @@ export default function RoutesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {EVENT.routes.map((route) => {
             const style = routeStyles[route.color];
             return (

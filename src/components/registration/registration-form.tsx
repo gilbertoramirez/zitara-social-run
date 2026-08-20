@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { EVENT } from "@/lib/constants";
 import WaiverModal from "./waiver-modal";
 
-type RouteOption = "3km" | "5km" | "8km";
+type RouteOption = "3km" | "6km";
 
 interface FormErrors {
   nombre?: string;
@@ -24,10 +24,6 @@ const routeCardStyles: Record<string, { ring: string; bg: string }> = {
   blue: {
     ring: "ring-zitara-gold",
     bg: "bg-amber-50",
-  },
-  violet: {
-    ring: "ring-zitara-olive",
-    bg: "bg-stone-50",
   },
 };
 
@@ -173,7 +169,7 @@ export default function RegistrationForm() {
         {errors.ruta && (
           <p className="mb-2 text-sm text-red-500">{errors.ruta}</p>
         )}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {EVENT.routes.map((route) => {
             const style = routeCardStyles[route.color];
             const selected = ruta === route.distance;

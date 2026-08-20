@@ -64,8 +64,8 @@ export async function sendConfirmationEmail(params: {
                 <tr>
                   <td style="padding:0 24px 24px;">
                     <p style="margin:0 0 8px;color:#666;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Horario</p>
-                    <p style="margin:0;color:#313323;font-size:16px;"><strong>6:25 AM</strong> — Registro y entrega de calcetas</p>
-                    <p style="margin:4px 0 0;color:#313323;font-size:16px;"><strong>7:00 AM</strong> — Banderazo de salida</p>
+                    <p style="margin:0;color:#313323;font-size:16px;"><strong>6:25 AM</strong> — Registro, entrega de calcetas y salida</p>
+                    <p style="margin:4px 0 0;color:#313323;font-size:16px;"><strong>Lugar:</strong> Blvd. Luis Adolfo Ruiz, Salida Calvillo</p>
                   </td>
                 </tr>
               </table>
@@ -80,7 +80,7 @@ export async function sendConfirmationEmail(params: {
                 <tr>
                   <td style="padding:16px 20px;">
                     <p style="margin:0;color:#313323;font-size:14px;">
-                      <strong>Recuerda:</strong> Llega puntual a las 6:25 AM para el registro y entrega de calcetas. El banderazo de salida es a las 7:00 AM. Evento Pet Friendly.
+                      <strong>Recuerda:</strong> Llega puntual a las 6:25 AM para el registro, entrega de calcetas y salida. Evento Pet Friendly. Después de la carrera: Body Combat, Body Balance, Zumba y desayuno.
                     </p>
                   </td>
                 </tr>

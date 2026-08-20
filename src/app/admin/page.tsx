@@ -19,7 +19,7 @@ export default async function AdminPage() {
   if (!authed) return <AdminLoginForm />;
 
   let allRegistrations: (typeof registrations.$inferSelect)[] = [];
-  let stats = { total: 0, "3km": 0, "5km": 0, "8km": 0, verificados: 0 };
+  let stats = { total: 0, "3km": 0, "6km": 0, verificados: 0 };
 
   try {
     allRegistrations = await db
@@ -74,12 +74,11 @@ export default async function AdminPage() {
           <QrScanner />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           {[
             { label: "Total", value: stats.total, color: "bg-zitara-olive" },
             { label: "3 KM", value: stats["3km"], color: "bg-emerald-500" },
-            { label: "5 KM", value: stats["5km"], color: "bg-blue-500" },
-            { label: "8 KM", value: stats["8km"], color: "bg-violet-500" },
+            { label: "6 KM", value: stats["6km"], color: "bg-blue-500" },
             {
               label: "Check-in",
               value: stats.verificados,
@@ -156,9 +155,7 @@ export default async function AdminPage() {
                           className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold ${
                             reg.ruta === "3km"
                               ? "bg-emerald-100 text-emerald-700"
-                              : reg.ruta === "5km"
-                                ? "bg-blue-100 text-blue-700"
-                                : "bg-violet-100 text-violet-700"
+                              : "bg-blue-100 text-blue-700"
                           }`}
                         >
                           {reg.ruta.toUpperCase()}

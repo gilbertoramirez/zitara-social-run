@@ -131,9 +131,9 @@ export default async function ConfirmacionPage({
               </div>
               <div>
                 <p className="text-xs text-zitara-gray uppercase tracking-wider mb-1">
-                  Salida
+                  Lugar
                 </p>
-                <p className="font-semibold text-zitara-olive">7:00 AM</p>
+                <p className="font-semibold text-zitara-olive text-sm">Blvd. Luis Adolfo Ruiz, Salida Calvillo</p>
               </div>
             </div>
 

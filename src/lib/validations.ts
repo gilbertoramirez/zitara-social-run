@@ -20,7 +20,7 @@ export const registrationSchema = z.object({
         .string()
         .length(10, "El teléfono debe tener exactamente 10 dígitos")
     ),
-  ruta: z.enum(["3km", "5km", "8km"], {
+  ruta: z.enum(["3km", "6km"], {
     error: "Selecciona una ruta",
   }),
   aceptoResponsabilidad: z.literal(true, {

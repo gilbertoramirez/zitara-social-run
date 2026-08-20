@@ -3,11 +3,12 @@ export const EVENT = {
   tagline: "2do Aniversario de la Primera Piedra",
   subtitle: "Celebra con nosotros dos años de historia y crecimiento",
   date: "5 de septiembre, 2026",
-  eventDate: "2026-09-05T07:00:00-06:00",
+  eventDate: "2026-09-05T06:25:00-06:00",
   maxCapacity: 150,
   location: "Zítara",
+  address: "Blvd. Luis Adolfo Ruiz, Salida Calvillo",
   registrationTime: "6:25 AM",
-  startTime: "7:00 AM",
+  startTime: "6:25 AM",
   price: "Gratuito",
   petFriendly: true,
   routes: [
@@ -18,16 +19,10 @@ export const EVENT = {
       color: "emerald",
     },
     {
-      distance: "5km",
-      label: "5 KM",
-      description: "El clásico para corredores regulares",
-      color: "blue",
-    },
-    {
-      distance: "8km",
-      label: "8 KM",
+      distance: "6km",
+      label: "6 KM",
       description: "Para los más aventureros",
-      color: "violet",
+      color: "blue",
     },
   ],
   amenities: [
@@ -39,11 +34,10 @@ export const EVENT = {
     { icon: "surprise", label: "Sorpresas", desc: "Premios, sorpresas y mucha diversión durante todo el evento" },
   ],
   schedule: [
-    { time: "6:25 AM", title: "Registro y entrega de calcetas", description: "Recepción de participantes y entrega de calcetas a los registrados" },
-    { time: "7:00 AM", title: "¡Banderazo de salida!", description: "Inicio de la carrera para las rutas de 3 KM y 5 KM" },
-    { time: "8:00 AM", title: "Body Combat", description: "Clase de Body Combat para todos los asistentes" },
-    { time: "9:00 AM", title: "Body Balance", description: "Clase de Body Balance para relajarte y estirar" },
-    { time: "10:00 AM", title: "Zumba", description: "Clase de Zumba para cerrar con toda la energía" },
+    { time: "6:25 AM", title: "Registro, calcetas y ¡Salida!", description: "Recepción, entrega de calcetas y banderazo de salida para 3K y 6K" },
+    { time: "8:00 AM", title: "Body Combat", description: "Clase con Valeria Padilla" },
+    { time: "9:00 AM", title: "Body Balance", description: "Clase con Rosita Gonzales" },
+    { time: "10:00 AM", title: "Zumba", description: "Clase con Joselin Huerta" },
     { time: "11:00 AM", title: "Fin del evento", description: "Desayuno, zona de picnic, rehabilitación y sorpresas" },
   ],
 } as const;
@@ -56,7 +50,7 @@ Al registrarme y participar en el evento "Zítara Social Run", organizado como p
 Mi participación en este evento es completamente voluntaria. He decidido participar por mi propia voluntad y sin ningún tipo de coacción.
 
 2. CONDICIÓN FÍSICA
-Declaro que me encuentro en condiciones físicas adecuadas para realizar la actividad deportiva seleccionada (3 km, 5 km u 8 km). Reconozco que es mi responsabilidad consultar a un médico antes de participar si tengo alguna condición de salud preexistente.
+Declaro que me encuentro en condiciones físicas adecuadas para realizar la actividad deportiva seleccionada (3 km o 6 km). Reconozco que es mi responsabilidad consultar a un médico antes de participar si tengo alguna condición de salud preexistente.
 
 3. ACEPTACIÓN DE RIESGOS
 Reconozco que la práctica de actividades deportivas al aire libre conlleva riesgos inherentes, incluyendo pero no limitados a: caídas, lesiones musculares, deshidratación, golpes de calor, y otros incidentes propios de la actividad física. Acepto estos riesgos de manera consciente y voluntaria.

@@ -25,8 +25,8 @@ export default function CtaSection() {
           con la naturaleza
         </h2>
         <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto">
-          Celebra con nosotros dos años de historia y crecimiento en Zítara.
-          Evento gratuito con registro previo.
+          Carrera, Body Combat, Body Balance, Zumba, desayuno y sorpresas.
+          Evento gratuito con registro previo. Calcetas gratis en tu inscripción.
         </p>
         <Link
           href="/registro"
