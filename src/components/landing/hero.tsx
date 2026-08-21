@@ -14,14 +14,14 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-zitara-cream rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
         <div className="animate-fade-in-up flex justify-center mb-8">
           <Image
             src="/images/evento-2do-aniversario.jpeg"
             alt="Zítara 2do Aniversario"
             width={500}
             height={100}
-            className="h-16 sm:h-20 lg:h-24 w-auto"
+            className="h-20 sm:h-28 lg:h-32 w-auto"
             priority
           />
         </div>
