@@ -15,25 +15,25 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
-        <div className="animate-fade-in-up flex justify-center mb-8">
-          <Image
-            src="/images/evento-2do-aniversario.jpeg"
-            alt="Zitara 2do Aniversario"
-            width={500}
-            height={100}
-            className="h-20 sm:h-28 lg:h-32 w-auto"
-            priority
-          />
-        </div>
-
-        <h1 className="animate-fade-in-up animate-delay-100">
+        <h1 className="animate-fade-in-up">
           <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
-            Workout Zitara
+            Workout Zítara
           </span>
           <span className="block text-lg sm:text-xl text-zitara-gold font-medium tracking-[0.2em] uppercase mt-4">
             Pampering Runners Day
           </span>
         </h1>
+
+        <div className="animate-fade-in-up animate-delay-100 flex justify-center mt-8">
+          <Image
+            src="/images/logo-2do-aniversario.png"
+            alt="2do Aniversario Primera Piedra"
+            width={500}
+            height={100}
+            className="h-16 sm:h-24 lg:h-28 w-auto"
+            priority
+          />
+        </div>
 
         <p className="animate-fade-in-up animate-delay-100 mt-4 text-lg text-white/40 font-medium">
           {EVENT.date}
