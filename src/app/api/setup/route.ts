@@ -35,6 +35,23 @@ export async function GET() {
       END $$
     `;
 
+    await sql`
+      DO $$ BEGIN
+        IF NOT EXISTS (
+          SELECT 1 FROM information_schema.columns
+          WHERE table_name = 'registrations' AND column_name = 'llevara_mascota'
+        ) THEN
+          ALTER TABLE registrations ADD COLUMN llevara_mascota BOOLEAN DEFAULT false;
+        END IF;
+        IF NOT EXISTS (
+          SELECT 1 FROM information_schema.columns
+          WHERE table_name = 'registrations' AND column_name = 'nombre_mascota'
+        ) THEN
+          ALTER TABLE registrations ADD COLUMN nombre_mascota VARCHAR(255);
+        END IF;
+      END $$
+    `;
+
     return NextResponse.json({
       success: true,
       message: "Tabla de registros actualizada exitosamente",

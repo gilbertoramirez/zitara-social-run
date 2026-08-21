@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { nombre, email, telefono, ruta } = parsed.data;
+    const { nombre, email, telefono, ruta, llevaraMascota, nombreMascota } = parsed.data;
     const codigoQr = uuidv4();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const verificationUrl = `${baseUrl}/confirmacion?codigo=${codigoQr}`;
@@ -42,6 +42,8 @@ export async function POST(request: NextRequest) {
         email,
         telefono,
         ruta,
+        llevaraMascota: llevaraMascota || false,
+        nombreMascota: llevaraMascota && nombreMascota ? nombreMascota : null,
         aceptoResponsabilidad: true,
         codigoQr,
       });

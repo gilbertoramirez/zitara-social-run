@@ -23,6 +23,12 @@ export const registrationSchema = z.object({
   ruta: z.enum(["3km", "6km"], {
     error: "Selecciona una ruta",
   }),
+  llevaraMascota: z.boolean().default(false),
+  nombreMascota: z
+    .string()
+    .max(255, "El nombre de la mascota es demasiado largo")
+    .optional()
+    .default(""),
   aceptoResponsabilidad: z.literal(true, {
     error: "Debes aceptar el deslinde de responsabilidad",
   }),

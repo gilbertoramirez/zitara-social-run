@@ -119,6 +119,9 @@ export default async function AdminPage() {
                     Ruta
                   </th>
                   <th className="text-left py-3 px-4 font-semibold text-gray-600">
+                    Mascota
+                  </th>
+                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
                     Fecha
                   </th>
                   <th className="text-left py-3 px-4 font-semibold text-gray-600">
@@ -130,7 +133,7 @@ export default async function AdminPage() {
                 {allRegistrations.length === 0 ? (
                   <tr>
                     <td
-                      colSpan={7}
+                      colSpan={8}
                       className="text-center py-8 text-gray-400"
                     >
                       No hay registros aún
@@ -160,6 +163,15 @@ export default async function AdminPage() {
                         >
                           {reg.ruta.toUpperCase()}
                         </span>
+                      </td>
+                      <td className="py-3 px-4 text-gray-600">
+                        {reg.llevaraMascota ? (
+                          <span className="text-amber-600 font-medium">
+                            {reg.nombreMascota || "Sí"}
+                          </span>
+                        ) : (
+                          <span className="text-gray-400">No</span>
+                        )}
                       </td>
                       <td className="py-3 px-4 text-gray-600">
                         {reg.creadoEn.toLocaleDateString("es-MX")}

@@ -16,6 +16,8 @@ export const registrations = pgTable("registrations", {
   aceptoResponsabilidad: boolean("acepto_responsabilidad")
     .notNull()
     .default(false),
+  llevaraMascota: boolean("llevara_mascota").default(false),
+  nombreMascota: varchar("nombre_mascota", { length: 255 }),
   codigoQr: text("codigo_qr").notNull().unique(),
   verificado: boolean("verificado").default(false),
   creadoEn: timestamp("creado_en").defaultNow().notNull(),

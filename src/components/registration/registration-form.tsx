@@ -33,6 +33,8 @@ export default function RegistrationForm() {
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
   const [ruta, setRuta] = useState<RouteOption | "">("");
+  const [llevaraMascota, setLlevaraMascota] = useState(false);
+  const [nombreMascota, setNombreMascota] = useState("");
   const [acepto, setAcepto] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,6 +77,8 @@ export default function RegistrationForm() {
           email,
           telefono,
           ruta,
+          llevaraMascota,
+          nombreMascota: llevaraMascota ? nombreMascota : "",
           aceptoResponsabilidad: acepto,
         }),
       });
@@ -198,6 +202,57 @@ export default function RegistrationForm() {
             );
           })}
         </div>
+      </div>
+
+      <div>
+        <p className="block text-sm font-semibold text-zitara-olive mb-4">
+          ¿Llevarás mascota?
+        </p>
+        <div className="grid grid-cols-2 gap-4">
+          <button
+            type="button"
+            onClick={() => {
+              setLlevaraMascota(false);
+              setNombreMascota("");
+            }}
+            className={`p-4 rounded-xl border-2 transition-all text-center ${
+              !llevaraMascota
+                ? "bg-amber-50 ring-2 ring-zitara-gold border-transparent"
+                : "border-gray-200 hover:border-gray-300"
+            }`}
+          >
+            <span className="block text-xl mb-1">Sin mascota</span>
+            <span className="block text-xs text-zitara-gray">Iré solo/a</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setLlevaraMascota(true)}
+            className={`p-4 rounded-xl border-2 transition-all text-center ${
+              llevaraMascota
+                ? "bg-amber-50 ring-2 ring-zitara-gold border-transparent"
+                : "border-gray-200 hover:border-gray-300"
+            }`}
+          >
+            <span className="block text-xl mb-1">Con mascota</span>
+            <span className="block text-xs text-zitara-gray">Pet friendly</span>
+          </button>
+        </div>
+
+        {llevaraMascota && (
+          <div className="mt-4">
+            <label htmlFor="nombreMascota" className="block text-sm font-semibold text-zitara-olive mb-2">
+              Nombre de tu mascota
+            </label>
+            <input
+              id="nombreMascota"
+              type="text"
+              value={nombreMascota}
+              onChange={(e) => setNombreMascota(e.target.value)}
+              placeholder="¿Cómo se llama tu mascota?"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-zitara-gold/50 focus:border-zitara-gold transition-colors text-gray-900 placeholder:text-gray-400"
+            />
+          </div>
+        )}
       </div>
 
       <div className="bg-zitara-cream rounded-xl p-6">
