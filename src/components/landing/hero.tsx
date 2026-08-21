@@ -17,24 +17,21 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in-up flex justify-center mb-8">
           <Image
-            src="/images/logo-gc-olive.png"
-            alt="Zítara Golf Club"
-            width={280}
-            height={280}
-            className="h-48 sm:h-56 lg:h-64 w-auto"
+            src="/images/evento-2do-aniversario.jpeg"
+            alt="Zítara 2do Aniversario"
+            width={500}
+            height={100}
+            className="h-16 sm:h-20 lg:h-24 w-auto"
             priority
           />
         </div>
 
-        <div className="animate-fade-in-up">
-          <p className="text-zitara-gold text-sm sm:text-base font-medium tracking-[0.3em] uppercase mb-6">
-            {EVENT.tagline}
-          </p>
-        </div>
-
         <h1 className="animate-fade-in-up animate-delay-100">
           <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
-            Social Run
+            Workout Zítara
+          </span>
+          <span className="block text-lg sm:text-xl text-zitara-gold font-medium tracking-[0.2em] uppercase mt-4">
+            Pampering Runners Day
           </span>
         </h1>
 

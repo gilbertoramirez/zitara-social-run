@@ -1,7 +1,7 @@
 export const EVENT = {
-  name: "Zítara Social Run",
-  tagline: "2do Aniversario de la Primera Piedra",
-  subtitle: "Celebra con nosotros dos años de historia y crecimiento",
+  name: "Workout Zítara",
+  tagline: "Pampering Runners Day",
+  subtitle: "Desayuno, rehabilitación y sorpresas. Calcetas gratis en tu inscripción.",
   date: "5 de septiembre, 2026",
   eventDate: "2026-09-05T06:25:00-06:00",
   maxCapacity: 150,

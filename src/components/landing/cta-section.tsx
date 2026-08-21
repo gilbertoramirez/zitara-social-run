@@ -12,11 +12,11 @@ export default function CtaSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex justify-center mb-8">
           <Image
-            src="/images/logo-gc-olive.png"
-            alt="Zítara Golf Club"
-            width={120}
-            height={120}
-            className="h-24 sm:h-28 w-auto opacity-60"
+            src="/images/evento-2do-aniversario.jpeg"
+            alt="Zítara 2do Aniversario"
+            width={400}
+            height={80}
+            className="h-12 sm:h-16 w-auto opacity-80"
           />
         </div>
         <h2 className="text-4xl sm:text-5xl font-heading font-black text-white leading-tight uppercase tracking-tight">
