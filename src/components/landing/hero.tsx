@@ -26,7 +26,7 @@ export default function Hero() {
 
         <div className="animate-fade-in-up animate-delay-100 flex justify-center mt-8">
           <Image
-            src="/images/logo-2do-aniversario.png"
+            src="/images/logo-2do-aniversario-white.png"
             alt="2do Aniversario Primera Piedra"
             width={500}
             height={100}
