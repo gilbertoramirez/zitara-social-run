@@ -4,7 +4,8 @@ const sponsors = [
   { src: "/images/sponsors/one-day-running-club-dark.jpeg", alt: "One Day Running Club", height: "h-20" },
   { src: "/images/sponsors/jac.jpeg", alt: "JAC Aguascalientes", height: "h-16" },
   { src: "/images/sponsors/bms.png", alt: "BMS", height: "h-16" },
-  { src: "/images/sponsors/workout-zitara.jpeg", alt: "Workout Zítara", height: "h-16" },
+  { src: "/images/sponsors/zitara-horizontal.png", alt: "Zítara", height: "h-16" },
+  { src: "/images/sponsors/zitara-golf-club.png", alt: "Zítara Golf Club", height: "h-16" },
 ];
 
 export default function Footer() {
