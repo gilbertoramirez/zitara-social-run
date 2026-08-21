@@ -31,11 +31,11 @@ export default async function RegistroPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-gc-horizontal-olive.png"
-              alt="Zítara Golf Club"
-              width={160}
-              height={44}
-              className="h-10 w-auto"
+              src="/images/z-mark.png"
+              alt="Zítara"
+              width={40}
+              height={40}
+              className="h-9 w-auto"
             />
           </Link>
         </div>

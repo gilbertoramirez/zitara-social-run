@@ -53,11 +53,11 @@ export default async function AdminPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo-gc-horizontal-olive.png"
-              alt="Zítara Golf Club"
-              width={160}
-              height={44}
-              className="h-10 w-auto"
+              src="/images/z-mark.png"
+              alt="Zítara"
+              width={40}
+              height={40}
+              className="h-9 w-auto"
             />
             <span className="text-[10px] text-zitara-gold font-medium tracking-widest uppercase">
               Admin

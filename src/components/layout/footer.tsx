@@ -33,11 +33,11 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <Image
-              src="/images/logo-gc-horizontal-olive.png"
-              alt="Zítara Golf Club"
-              width={160}
-              height={44}
-              className="h-11 w-auto"
+              src="/images/z-mark.png"
+              alt="Zítara"
+              width={40}
+              height={40}
+              className="h-9 w-auto"
             />
           </div>
           <div className="text-sm text-center md:text-right">
