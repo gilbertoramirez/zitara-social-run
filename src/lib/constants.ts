@@ -21,7 +21,7 @@ export const EVENT = {
     {
       distance: "6km",
       label: "6 KM",
-      description: "Da las vueltas que quieras",
+      description: "Para los más aventureros, da las vueltas que quieras",
       color: "blue",
     },
   ],
