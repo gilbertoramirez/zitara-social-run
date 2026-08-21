@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
         <h1 className="animate-fade-in-up">
           <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
-            Workout Zítara
+            Workout Zitara
           </span>
           <span className="block text-lg sm:text-xl text-zitara-gold font-medium tracking-[0.2em] uppercase mt-4">
             Pampering Runners Day
