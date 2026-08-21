@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const sponsors = [
-  { src: "/images/sponsors/one-day-running-club-dark.jpeg", alt: "One Day Running Club", height: "h-12" },
-  { src: "/images/sponsors/jac.jpeg", alt: "JAC Aguascalientes", height: "h-10" },
-  { src: "/images/sponsors/bms.png", alt: "BMS", height: "h-10" },
-  { src: "/images/sponsors/workout-zitara.jpeg", alt: "Workout Zítara", height: "h-10" },
+  { src: "/images/sponsors/one-day-running-club-dark.jpeg", alt: "One Day Running Club", height: "h-20" },
+  { src: "/images/sponsors/jac.jpeg", alt: "JAC Aguascalientes", height: "h-16" },
+  { src: "/images/sponsors/bms.png", alt: "BMS", height: "h-16" },
+  { src: "/images/sponsors/workout-zitara.jpeg", alt: "Workout Zítara", height: "h-16" },
 ];
 
 export default function Footer() {
@@ -21,8 +21,8 @@ export default function Footer() {
                 key={s.alt}
                 src={s.src}
                 alt={s.alt}
-                width={160}
-                height={60}
+                width={240}
+                height={100}
                 className={`${s.height} w-auto object-contain rounded`}
               />
             ))}
