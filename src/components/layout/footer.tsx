@@ -30,20 +30,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/images/z-mark.png"
-              alt="Zítara"
-              width={40}
-              height={40}
-              className="h-9 w-auto"
-            />
-          </div>
-          <div className="text-sm text-center md:text-right">
-            <p>Evento gratuito con registro previo</p>
-            <p className="mt-1">&copy; {new Date().getFullYear()} Zítara Golf Club. Todos los derechos reservados.</p>
-          </div>
+        <div className="text-sm text-center">
+          <p>Evento gratuito con registro previo</p>
+          <p className="mt-1">&copy; {new Date().getFullYear()} Zítara Golf Club. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
