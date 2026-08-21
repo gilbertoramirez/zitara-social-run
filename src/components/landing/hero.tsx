@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="animate-fade-in-up flex justify-center mb-8">
           <Image
             src="/images/evento-2do-aniversario.jpeg"
-            alt="Zítara 2do Aniversario"
+            alt="Zitara 2do Aniversario"
             width={500}
             height={100}
             className="h-20 sm:h-28 lg:h-32 w-auto"
@@ -28,7 +28,7 @@ export default function Hero() {
 
         <h1 className="animate-fade-in-up animate-delay-100">
           <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
-            Workout Zítara
+            Workout Zitara
           </span>
           <span className="block text-lg sm:text-xl text-zitara-gold font-medium tracking-[0.2em] uppercase mt-4">
             Pampering Runners Day
