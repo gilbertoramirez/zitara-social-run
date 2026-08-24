@@ -12,7 +12,7 @@ export default function CtaSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex justify-center mb-8">
           <Image
-            src="/images/logo-2do-aniversario.png"
+            src="/images/logo-2do-aniversario-negro.jpeg"
             alt="2do Aniversario Primera Piedra"
             width={400}
             height={80}
