@@ -5,8 +5,8 @@ import { registrations } from "@/lib/db/schema";
 import { desc, sql } from "drizzle-orm";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
 import AdminLoginForm from "@/components/admin/login-form";
-import CheckinButton from "@/components/admin/checkin-button";
 import QrScanner from "@/components/admin/qr-scanner";
+import RegistrationsTable from "@/components/admin/registrations-table";
 
 export const metadata = {
   title: "Admin — Zítara Social Run",
@@ -98,100 +98,19 @@ export default async function AdminPage() {
           ))}
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-100">
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    #
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Nombre
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Email
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Teléfono
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Ruta
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Mascota
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Fecha
-                  </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-600">
-                    Estado
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {allRegistrations.length === 0 ? (
-                  <tr>
-                    <td
-                      colSpan={8}
-                      className="text-center py-8 text-gray-400"
-                    >
-                      No hay registros aún
-                    </td>
-                  </tr>
-                ) : (
-                  allRegistrations.map((reg, i) => (
-                    <tr
-                      key={reg.id}
-                      className="border-b border-gray-50 hover:bg-gray-50"
-                    >
-                      <td className="py-3 px-4 text-gray-400">{i + 1}</td>
-                      <td className="py-3 px-4 font-medium text-gray-900">
-                        {reg.nombre}
-                      </td>
-                      <td className="py-3 px-4 text-gray-600">{reg.email}</td>
-                      <td className="py-3 px-4 text-gray-600">
-                        {reg.telefono}
-                      </td>
-                      <td className="py-3 px-4">
-                        <span
-                          className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold ${
-                            reg.ruta === "3km"
-                              ? "bg-emerald-100 text-emerald-700"
-                              : "bg-blue-100 text-blue-700"
-                          }`}
-                        >
-                          {reg.ruta.toUpperCase()}
-                        </span>
-                      </td>
-                      <td className="py-3 px-4 text-gray-600">
-                        {reg.llevaraMascota ? (
-                          <span className="text-amber-600 font-medium">
-                            {reg.nombreMascota || "Sí"}
-                          </span>
-                        ) : (
-                          <span className="text-gray-400">No</span>
-                        )}
-                      </td>
-                      <td className="py-3 px-4 text-gray-600">
-                        {reg.creadoEn.toLocaleDateString("es-MX")}
-                      </td>
-                      <td className="py-3 px-4">
-                        {reg.verificado ? (
-                          <span className="text-emerald-600 font-medium">
-                            Check-in
-                          </span>
-                        ) : (
-                          <CheckinButton id={reg.id} />
-                        )}
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <RegistrationsTable
+          registrations={allRegistrations.map((reg) => ({
+            id: reg.id,
+            nombre: reg.nombre,
+            email: reg.email,
+            telefono: reg.telefono,
+            ruta: reg.ruta,
+            llevaraMascota: reg.llevaraMascota,
+            nombreMascota: reg.nombreMascota,
+            verificado: reg.verificado,
+            creadoEn: reg.creadoEn.toLocaleDateString("es-MX"),
+          }))}
+        />
       </div>
     </div>
   );
