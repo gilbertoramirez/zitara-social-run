@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
         <div className="animate-fade-in-up flex flex-col items-center">
           <Image
-            src="/images/sponsors/workout-zitara.jpeg"
+            src="/images/Work Out Zitara.png"
             alt="Workout Zitara"
             width={600}
             height={200}
