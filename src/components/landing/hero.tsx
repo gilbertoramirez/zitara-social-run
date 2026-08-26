@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-zitara-cream rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-32">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-32 sm:pt-28 lg:pt-24">
         <div className="animate-fade-in-up flex flex-col items-center">
           <Image
             src="/images/Work Out Zitara.png"
