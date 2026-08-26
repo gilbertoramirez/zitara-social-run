@@ -15,14 +15,19 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
-        <h1 className="animate-fade-in-up">
-          <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
-            Workout Zitara
-          </span>
+        <div className="animate-fade-in-up flex flex-col items-center">
+          <Image
+            src="/images/sponsors/workout-zitara.jpeg"
+            alt="Workout Zitara"
+            width={600}
+            height={200}
+            className="h-24 sm:h-36 lg:h-44 w-auto"
+            priority
+          />
           <span className="block text-lg sm:text-xl text-zitara-gold font-medium tracking-[0.2em] uppercase mt-4">
             Pampering Runners Day
           </span>
-        </h1>
+        </div>
 
         <div className="animate-fade-in-up animate-delay-100 flex justify-center mt-8">
           <Image

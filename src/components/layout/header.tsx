@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo-gc-horizontal-olive.png"
+              src="/images/Club PNG _Mesa de trabajo 1.png"
               alt="Zítara Golf Club"
               width={180}
               height={50}
