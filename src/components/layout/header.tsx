@@ -16,8 +16,8 @@ export default function Header() {
               src="/images/Club PNG _Mesa de trabajo 1.png"
               alt="Zítara Golf Club"
               width={320}
-              height={88}
-              className="h-20 w-auto"
+              height={226}
+              className="w-40 sm:w-48 h-auto"
               priority
             />
           </Link>
