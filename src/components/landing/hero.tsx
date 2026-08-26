@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { EVENT } from "@/lib/constants";
 import Countdown from "./countdown";
 import SpotsCounter from "./spots-counter";
+import RegisterButton from "./register-button";
 
 export default function Hero() {
   return (
@@ -14,19 +14,24 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-zitara-cream rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
-        <h1 className="animate-fade-in-up">
-          <span className="block text-5xl sm:text-7xl lg:text-8xl font-heading font-black text-white tracking-tight leading-none uppercase">
-            Workout Zitara
-          </span>
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-32 sm:pt-28 lg:pt-24">
+        <div className="animate-fade-in-up flex flex-col items-center">
+          <Image
+            src="/images/Work Out Zitara.png"
+            alt="Workout Zitara"
+            width={600}
+            height={200}
+            className="h-24 sm:h-36 lg:h-44 w-auto"
+            priority
+          />
           <span className="block text-lg sm:text-xl text-zitara-gold font-medium tracking-[0.2em] uppercase mt-4">
             Pampering Runners Day
           </span>
-        </h1>
+        </div>
 
         <div className="animate-fade-in-up animate-delay-100 flex justify-center mt-8">
           <Image
-            src="/images/logo-2do-aniversario-negro.jpeg"
+            src="/images/Logotipo 2do Aniversario [Recuperado].png"
             alt="2do Aniversario Primera Piedra"
             width={500}
             height={100}
@@ -50,12 +55,7 @@ export default function Hero() {
         </p>
 
         <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/registro"
-            className="bg-zitara-gold hover:bg-zitara-gold-light text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-zitara-gold/25"
-          >
-            Registrarme Gratis
-          </Link>
+          <RegisterButton />
           <a
             href="#rutas"
             className="border-2 border-white/20 hover:border-zitara-gold/40 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:bg-white/5"
