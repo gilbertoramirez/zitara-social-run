@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { EVENT } from "@/lib/constants";
 import Countdown from "./countdown";
 import SpotsCounter from "./spots-counter";
+import RegisterButton from "./register-button";
 
 export default function Hero() {
   return (
@@ -50,12 +50,7 @@ export default function Hero() {
         </p>
 
         <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/registro"
-            className="bg-zitara-gold hover:bg-zitara-gold-light text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-zitara-gold/25"
-          >
-            Registrarme Gratis
-          </Link>
+          <RegisterButton />
           <a
             href="#rutas"
             className="border-2 border-white/20 hover:border-zitara-gold/40 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:bg-white/5"

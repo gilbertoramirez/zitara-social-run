@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import RegisterButton from "./register-button";
 
 export default function CtaSection() {
   return (
@@ -28,12 +28,9 @@ export default function CtaSection() {
           Carrera, Body Combat, Body Balance, Zumba, desayuno y sorpresas.
           Evento gratuito con registro previo. Calcetas gratis en tu inscripción.
         </p>
-        <Link
-          href="/registro"
-          className="inline-block mt-10 bg-zitara-gold hover:bg-zitara-gold-light text-white font-semibold px-12 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-zitara-gold/25"
-        >
-          Registrarme Ahora
-        </Link>
+        <div className="mt-10">
+          <RegisterButton label="Registrarme Ahora" className="px-12" />
+        </div>
       </div>
     </section>
   );
